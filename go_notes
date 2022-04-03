@@ -1,0 +1,79 @@
+for input from user : package bufio
+
+If you write backends and Apis, a lot of parameters come to you via a string or URl,
+This urls , when you convert them can give you potential causes/crashes.
+
+------------------------------
+
+1. create a folder
+2. make a main.go
+<<<<<<< HEAD
+3. $ go mod init <folder name>
+=======
+3. $ go mod init <folder/module name>          // to make a module to export
+>>>>>>> 6636f1edf19918ed01db65d69ef936237c997c43
+
+-----------------------------
+
+time is strict
+
+-----------------------------
+
+in the environment, we have different variables
+
+$ go env
+
+One of them is GOOS ( or goos )
+
+$ GOOS="windows" go build       : to  build windows executable , automatically finds the main.go file
+
+$ GOOS="darwin" go build        : to build mac executable
+
+$ GOOS="linux" go build         : to build linux executable
+
+-----------------------------
+
+Memory management:  Memory alloc and dealloc happens automatically
+                    garb collec. is automatic
+                    out of scope becomes nil
+
+new() and make()
+
+new()   : alloc memory but not initialized
+        : zeroed storage
+
+make()  : alloc mem and initializes
+        : non-zeroed storage
+
+<<<<<<< HEAD
+------------------------------
+
+
+=======
+delete(): to delete an element in slice / map
+
+%v      : value
+%T      : type
+%+v     : struct
+
+
+------------------------------ FUNCTIONS  -----------------------
+
+1. 
+
+func <name>(args) <return type> {
+
+}
+
+2. 
+
+func <name>(args) (return s) {
+
+}
+
+3. 
+
+func <name> (values ...int) <return> {
+        
+}
+>>>>>>> 6636f1edf19918ed01db65d69ef936237c997c43

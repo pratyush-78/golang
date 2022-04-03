@@ -1,0 +1,99 @@
+- Variable declaration
+	var foo int
+	var foo int = 42
+	foo := 42
+	
+Can't redeclare variables, but can shadow them
+
+All variables must be used
+
+Visibility
+- lower case first letter for package scope
+- upper case first letter to export
+- no private scope
+
+
+- Naming conventions
+* 	Pascal or camelCase
+	Capitalize acronyms (HTTP, URL)
+
+- As short as reasonable
+	longer names for longer lives
+
+- Type conversions
+- 	destinationType(variable)
+	use strconv package for strings
+	
+	
+STRINGS IN GO ARE aliases FOR BYTES
+
+single unit is not char but uint8
+
+
+- Immutable, but can be shadowed
+- Replaced by the compiler at compile time
+= 	Value must be calculable at compile time
+
+- Named like variables
+- 	PascalCase for exported constants
+- 	camelCase for internal constants
+
+- Typed constants work like immutable variables
+* 	Can interoperate only with same type
+
+- Untyped constants work like literals
+* 	Can interoperate with similar types
+
+* Enumerated constants
++ 	Special symbol iota allows related constants to be created easily
++ 	Iota starts at 0 in each const block and increments by one
+
+* 	Watch out of constant values that match zero values for variables
+
+* Enumerated expressions
++ 	Operations that can be determined at compile time are allowed\
+	Arithmetic
+- 	Bitwise operations
+	Bitshifting
+	
+	
+	
+ARRAYS
+	collection of items with same type
+	fixed size
+	Declaration styles:
+		a := [3]int {1,2,3}
+		a := [...]int {1,2,3}
+		var a [3]int
+- 	Access via zero-based index
+“ 		a := [3]int {1, 3, 5} // a[1] == 3
+	len func returns SIZE of array
+	Copies refer to different underlying data
+	
+SLICES
+- 	Backed by array
+
+Creations styles:
+	* Slice an existing array or slice
+	Literal style
+	via make func
+		a := make( []int, 10) 		// size and capacity == 10
+		
+		a := make( []int, 10, 100)	// slice length =10	 &&	 capacity ==100
+
+
+- len function returns length of slice
++ cap function returns length of underlying array
+- append function to add elements to slice
+	
+	* May cause expensive copy operation if underlying array is too small	(means if capacity of underlying array gets full, then new memory is allocated which is expensive)
+
+- Copies refer to same underlying array
+
+
+
+
+
+
+
+

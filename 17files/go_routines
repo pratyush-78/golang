@@ -1,0 +1,13 @@
+concurrency     &    parallelism
+
+---                  ------
+   --    --          ------
+     ----            ------
+
+
+Go routines : a way to achieve parallelism
+
+Threads                 vs        goroutines
+
+managed by OS           |       managed by Go runtime
+fixed stack - 1 Mb      |       flexible stack - 2 kb   
