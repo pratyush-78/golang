@@ -3,11 +3,19 @@ package main
 import "fmt"
 
 func main() {
+
+	// 1.	open the resource
+	// 2.	check for error
+	// 3.	close the resource
 	fmt.Println("Welcome to class of defers")
 
 	// 2 rules:
-	// defer puts the execution of the line at the end of func()
+	// defer puts the execution of the line at the end of func() with the initial arguments, (at the time when defer is written)
 	// works like LIFO or ( stack )
+
+	a := "start"
+	defer fmt.Println(a) // will print "start"
+	a = "end"
 
 	defer fmt.Println("Last line")
 	defer fmt.Println("2nd Last line")

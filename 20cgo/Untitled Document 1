@@ -1,0 +1,18 @@
+Convert char* (C string) to GO String:
+
+p := // char*
+g := C.GoString(p)
+
+print(g)
+
+
+https://karthikkaranth.me/blog/calling-c-code-from-go/
+
+https://go.dev/blog/cgo
+
+https://github.com/golang/go/wiki/cgo
+
+https://github.com/AlekSi/cgo-by-example/blob/master/main.go
+
+https://gist.github.com/zchee/b9c99695463d8902cd33
+

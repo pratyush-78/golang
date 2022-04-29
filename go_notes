@@ -3,15 +3,21 @@ for input from user : package bufio
 If you write backends and Apis, a lot of parameters come to you via a string or URl,
 This urls , when you convert them can give you potential causes/crashes.
 
+
+------------------------------
+
+b := a          (b gets assigns a copy of a in primitive, structs, arrays) // unless a pointer is used
+        change b wont change a
+
+                (b references to a in slices, maps)
+        change b changes a
+
 ------------------------------
 
 1. create a folder
 2. make a main.go
-<<<<<<< HEAD
 3. $ go mod init <folder name>
-=======
 3. $ go mod init <folder/module name>          // to make a module to export
->>>>>>> 6636f1edf19918ed01db65d69ef936237c997c43
 
 -----------------------------
 
@@ -77,3 +83,6 @@ func <name> (values ...int) <return> {
         
 }
 >>>>>>> 6636f1edf19918ed01db65d69ef936237c997c43
+
+
+4:00:00 -> freecodecamp go

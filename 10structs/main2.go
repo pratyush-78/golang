@@ -5,6 +5,8 @@ import "fmt"
 func main() {
 	fmt.Println("Inline structs or Anonymous structs")
 
+	// use case is when we have to generate a JSON response to a webservice call
+
 	// short living structs
 
 	aDoctor := struct {

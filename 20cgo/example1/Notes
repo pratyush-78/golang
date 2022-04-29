@@ -1,0 +1,16 @@
+In Go you can call C programs and functions using cgo.
+easily create C bindings to other applications
+
+IMPORTANT: Do not leave a newline between the include and the import "C" statements or you will get errors
+
+It should be like"
+
+            // #include "file1.h"
+            // #include "file2.h"
+            import "C"
+
+
+To build (make binary)
+only refer to the main file
+
+go build main.go   

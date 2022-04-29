@@ -11,6 +11,20 @@ import (
 func main() {
 	fmt.Println("IF-ELSE in golang")
 
+	sp := map[string]int{
+		"California": 10000,
+		"Texas":      200000,
+		"New York":   44400,
+		"Ohio":       12334,
+	}
+
+	if pop, ok := sp["New York"]; ok {
+		fmt.Printf("Yes, New York is in sp map with value %v", pop)
+	}
+
+	// scope of pop variable is limited to if block
+	// fmt.Println(pop)		--> 	error
+	// cannot use pop here
 	num := 21
 
 	if num < 21 {
